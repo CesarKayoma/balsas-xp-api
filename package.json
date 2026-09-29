@@ -1,11 +1,12 @@
 {
   "name": "balsas-xp",
   "version": "1.0.0",
-  "description": "",
+  "description": "API Balsas XP",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch app.js",
+    "start": "npm app.js"
   },
   "keywords": [],
   "dependencies": {
