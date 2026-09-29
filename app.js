@@ -1,4 +1,6 @@
 import express from 'express';
+import attractions from './src/data/attractions.json' with {type: 'json'};
+
 
 const app = express();
 
@@ -13,6 +15,12 @@ app.get('/', (req, res) => {
         description: 'Balsas Tourist Attractions API'
     });
 });
+
+app.get('/health', (req, res) => {
+    res.json({message: 'ok'});
+});
+
+app.use('/attractions', attractionsRoutes)
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running in PORT ${PORT}`)
